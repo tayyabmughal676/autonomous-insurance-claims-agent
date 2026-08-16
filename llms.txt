@@ -1,0 +1,50 @@
+# Data Daur — Autonomous Insurance Claims Processing Platform
+> An enterprise-grade, multi-line autonomous insurance claims adjudication platform powered by Dual-Engine Orchestration (Native StateGraph + Official LangGraph), Multimodal Document OCR with 2D Bounding Boxes, ChromaDB Policy RAG, Multi-Vector Fraud Forensics, Zero-Hallucination Deterministic Financial Math, and ReportLab Legal PDF Generation.
+
+## Core Capabilities & Agentic Architecture
+- **Dual-Engine Multi-Agent Runtime**: Run workflows either via a zero-dependency, low-latency Native StateGraph orchestrator (`app/agents/graph.py`) or the official compiled LangGraph runtime (`app/agents/langgraph_adapter.py`) with 100% verdict and payout parity.
+- **Multimodal Intake & OCR Vision**: Extracts structured entities, CPT/HCPCS medical codes, repair estimates, and produces 2D normalized bounding boxes `[ymin, xmin, ymax, xmax]` for visual document overlay.
+- **Camera EXIF Forensics**: Inspects image metadata to detect altered timestamps and chronological loss inconsistencies.
+- **ChromaDB Policy Vector Knowledge Base**: Semantic search with cosine distance scoring against active policy contracts (Auto Collision/Comprehensive, Homeowners HO-3/HO-5, Health PPO) to identify covered perils and explicit exclusions.
+- **Multi-Vector Fraud Forensics Radar**: Computes comprehensive fraud risk scores (0-100) by detecting price inflation variance, unbundled hospital/provider fees, and triggers automated Special Investigation Unit (SIU) referrals.
+- **Zero-Hallucination Deterministic Financial Math Engine**: Strict pure-Python mathematical engine isolating indemnity calculations from probabilistic LLM hallucinations. Applies line-item deductibles, co-insurance percentages, fee schedules, and policy caps with floating-point precision.
+- **Print-Ready Legal PDF Settlement & Check Voucher Generator**: ReportLab-powered generator creating print-ready Explanation of Benefits (EOB) statements, simulated check disbursement stubs with MICR routing lines, and statutory notices of claim declination.
+- **High-Density React 18 / Tailwind v4 Workbench**: Adjuster command cockpit built to Vercel Web Interface Guidelines with keyboard accessibility, interactive evidence inspectors, and live thought stream timelines.
+
+## Technology Stack
+- **Backend**: Python 3.12+, FastAPI, LangGraph 1.2+, ChromaDB 1.5+, ReportLab 5.0+, Pydantic 2.13+, Astral uv, Pytest
+- **Frontend**: React 18, TypeScript, Tailwind CSS v4, Bun, Vite, Lucide Icons
+- **Type Checking & Linting**: Pyrefly (0 errors), Ruff (100% clean), ESLint (0 warnings)
+
+## Key REST API Endpoints
+- `GET /api/v1/health`: System health and vector store status
+- `POST /api/v1/seed`: Seeds 4 multi-line evaluation scenarios and indexes policy contracts
+- `GET /api/v1/claims`: List all claims in the pipeline (filterable by AUTO, PROPERTY, HEALTH)
+- `POST /api/v1/claims/{id}/process?engine=native|langgraph`: Execute 5-node AI adjudication pipeline
+- `GET /api/v1/claims/{id}/state`: Retrieve cached multi-agent thought trace and node telemetry
+- `POST /api/v1/claims/{id}/adjudicate`: Human-in-the-loop adjuster approval or declination
+- `GET /api/v1/claims/{id}/documents/settlement-pdf`: Download official PDF settlement voucher and check stub
+- `GET /api/v1/claims/{id}/documents/denial-pdf`: Download official legal notice of claim declination
+
+## Quickstart & Execution
+```bash
+# 1. Start Backend API
+uv sync
+uv run fastapi dev main.py --port 8000
+
+# 2. Start Frontend Workbench
+cd frontend
+bun install
+bun run dev --port 5173
+
+# 3. Run Dual-Engine Pipeline via cURL
+curl -X POST "http://localhost:8000/api/v1/claims/clm-auto-001/process?engine=native"
+curl -X POST "http://localhost:8000/api/v1/claims/clm-auto-001/process?engine=langgraph"
+```
+
+## Detailed Documentation & RFCs
+- [README.md](README.md): System overview, architecture diagram, and feature breakdown
+- [Native-StateGraph.md](Native-StateGraph.md): Enterprise Solution Architecture RFC comparing Native StateGraph vs. LangGraph with carrier ROI financial modeling
+- [USE.md](USE.md): Operational guide with complete cURL recipes
+- [frontend/USE.md](frontend/USE.md): Frontend adjuster workbench navigation guide
+- [CHANGELOG.md](CHANGELOG.md): Semantic versioning history (v1.0.0 through v1.6.0)

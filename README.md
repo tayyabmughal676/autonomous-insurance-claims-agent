@@ -159,6 +159,7 @@ bun run build
 ---
 
 ## 📖 Documentation & Architectural RFCs
+- **AI / LLM Search Index**: [llms.txt](file:///Users/mac/Desktop/InsuranceAgent/llms.txt)
 - **Architectural Whitepaper (Native StateGraph vs. LangGraph & ROI)**: [Native-StateGraph.md](file:///Users/mac/Desktop/InsuranceAgent/Native-StateGraph.md)
 - Complete cURL recipes and operational testing guide: [USE.md](file:///Users/mac/Desktop/InsuranceAgent/USE.md)
 - Frontend workbench navigation guide: [frontend/USE.md](file:///Users/mac/Desktop/InsuranceAgent/frontend/USE.md)
