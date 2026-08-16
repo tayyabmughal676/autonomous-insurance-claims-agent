@@ -1,0 +1,63 @@
+{
+  "policy_id": "POL-AUTO-GOLD-001",
+  "policy_number": "PA-884920-G",
+  "holder_name": "Marcus Vance",
+  "holder_id": "USR-9921",
+  "insurance_line": "AUTO",
+  "coverage_type": "Gold Comprehensive & Collision",
+  "effective_date": "2026-01-01",
+  "expiration_date": "2027-01-01",
+  "is_active": true,
+  "coverage_limit": 50000.0,
+  "deductible": 500.0,
+  "co_pay_percent": 0.0,
+  "co_insurance_percent": 0.0,
+  "applicable_perils": [
+    "Collision with vehicle or stationary object",
+    "Comprehensive: Fire, theft, vandalism, glass breakage, animal impact",
+    "Roadside emergency and towing"
+  ],
+  "specific_exclusions": [
+    "Normal wear, tear, and gradual mechanical deterioration",
+    "Damage occurring during unauthorized commercial rideshare/courier use",
+    "Intentional acts or staged collisions",
+    "Unlicensed operator at time of incident"
+  ],
+  "clauses": [
+    {
+      "clause_id": "AUTO-SEC-1.1",
+      "section_number": "1.1",
+      "section_title": "Collision Coverage & Repair Indemnity",
+      "content": "The insurer will pay for sudden, accidental direct physical loss to the insured vehicle caused by collision with another vehicle or object, subject to the applicable $500 collision deductible. Labor rates are reimbursed up to regional prevailing standard ($65.00/hr body, $85.00/hr mechanical).",
+      "is_exclusion": false
+    },
+    {
+      "clause_id": "AUTO-SEC-1.2",
+      "section_number": "1.2",
+      "section_title": "Replacement Parts Standard (OEM vs CAPA Certified)",
+      "content": "For vehicles exceeding 3 model years from manufacture, replacement body panels, bumpers, and non-structural components will be priced at CAPA-certified aftermarket or OEM-reconditioned standard unless an OEM-only rider is active.",
+      "is_exclusion": false
+    },
+    {
+      "clause_id": "AUTO-SEC-2.1",
+      "section_number": "2.1",
+      "section_title": "Deductible Application",
+      "content": "The insured collision deductible of $500 is applied once per loss incident and subtracted directly from the gross approved repair amount.",
+      "is_exclusion": false
+    },
+    {
+      "clause_id": "AUTO-SEC-3.1",
+      "section_number": "3.1",
+      "section_title": "Exclusion: Pre-Existing Damage & Wear",
+      "content": "Loss or damage existing prior to the reported incident date, rusted components, worn brake pads, and cosmetic rust degradation are expressly excluded from claim settlement.",
+      "is_exclusion": true
+    },
+    {
+      "clause_id": "AUTO-SEC-3.2",
+      "section_number": "3.2",
+      "section_title": "Exclusion: Fraudulent or Inconsistent Statements",
+      "content": "Any claim containing materially falsified timestamps, staged collisions, or manipulated photographic evidence will be denied and referred to the State Insurance Fraud Bureau.",
+      "is_exclusion": true
+    }
+  ]
+}

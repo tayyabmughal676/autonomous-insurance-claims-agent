@@ -1,0 +1,66 @@
+{
+  "policy_id": "POL-PROP-HO3-002",
+  "policy_number": "HO-449102-S",
+  "holder_name": "Elena Rostova",
+  "holder_id": "USR-7731",
+  "insurance_line": "PROPERTY",
+  "coverage_type": "HO-3 Special Form Homeowners",
+  "effective_date": "2025-06-01",
+  "expiration_date": "2026-06-01",
+  "is_active": true,
+  "coverage_limit": 450000.0,
+  "deductible": 1500.0,
+  "co_pay_percent": 0.0,
+  "co_insurance_percent": 0.0,
+  "applicable_perils": [
+    "Fire or lightning",
+    "Windstorm or hail",
+    "Sudden and accidental discharge or overflow of water or steam from within a plumbing, heating, or AC system",
+    "Vandalism or malicious mischief",
+    "Falling objects"
+  ],
+  "specific_exclusions": [
+    "Water Damage from Flood, surface water, waves, tidal water, or overflow of any body of water",
+    "Water below the surface of the ground including water which exerts pressure on or seeps through a building, sidewalk, driveway, or foundation",
+    "Continuous or repeated seepage or leakage over a period of 14 or more days",
+    "Earthquake, landslide, or earth movement",
+    "Neglect or failure to preserve property at and after time of loss"
+  ],
+  "clauses": [
+    {
+      "clause_id": "PROP-SEC-1.1",
+      "section_number": "Section I - Coverage A",
+      "content": "We cover the dwelling on the residence premises used principally as a private residence, including structures attached to the dwelling, against direct physical loss caused by an enumerated peril.",
+      "section_title": "Dwelling Coverage",
+      "is_exclusion": false
+    },
+    {
+      "clause_id": "PROP-SEC-1.2",
+      "section_number": "Section I - Peril 12",
+      "content": "Sudden and Accidental Discharge of Water: We cover sudden and accidental discharge or overflow of water or steam from within a plumbing, heating, air conditioning or automatic fire protective sprinkler system. This peril does not include loss to the system from which the water escaped.",
+      "section_title": "Plumbing & Water Discharge Peril",
+      "is_exclusion": false
+    },
+    {
+      "clause_id": "PROP-SEC-2.1",
+      "section_number": "Section I - Exclusion 3.a",
+      "content": "Water Exclusion - Ground Water Seepage: We do not insure for loss caused directly or indirectly by water below the surface of the ground, including water which exerts pressure on, or seeps, leaks or flows through a building, sidewalk, driveway, patio, foundation, basement floor or walls.",
+      "section_title": "Ground Water & Foundation Seepage Exclusion",
+      "is_exclusion": true
+    },
+    {
+      "clause_id": "PROP-SEC-2.2",
+      "section_number": "Section I - Exclusion 3.b",
+      "content": "Gradual Seepage Exclusion: We do not cover constant or repeated seepage or leakage of water or steam over a period of 14 or more days from within a plumbing system or household appliance.",
+      "section_title": "Chronic & Long-Term Leakage Exclusion",
+      "is_exclusion": true
+    },
+    {
+      "clause_id": "PROP-SEC-3.1",
+      "section_number": "Section I - Additional Limits",
+      "content": "Mold, Fungus, and Wet Rot Remediation Sublimit: Remediation and clean-up of mold resulting from a covered peril is subject to a strict aggregate policy sublimit of $5,000.00.",
+      "section_title": "Mold Remediation Sublimit",
+      "is_exclusion": false
+    }
+  ]
+}

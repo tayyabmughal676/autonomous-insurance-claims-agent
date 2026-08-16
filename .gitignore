@@ -1,0 +1,34 @@
+# Python & Environments
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.py[oc]
+.pytest_cache/
+.ruff_cache/
+.pyrefly/
+*.egg-info
+wheels/
+build/
+
+# Environment Variables & Secrets
+.env
+.env.local
+*.env
+
+# Chroma Vector Database Storage
+backend/app/rag/chroma_data/
+backend/app/rag/chroma_db/
+chroma_db/
+chroma_data/
+
+# Node & Frontend
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# IDE & OS
+.DS_Store
+.vscode/
+.idea/

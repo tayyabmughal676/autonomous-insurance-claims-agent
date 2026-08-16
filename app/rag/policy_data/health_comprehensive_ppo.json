@@ -1,0 +1,58 @@
+{
+  "policy_id": "POL-HLTH-PPO-003",
+  "policy_number": "HP-109283-E",
+  "holder_name": "David Chen",
+  "holder_id": "USR-4419",
+  "insurance_line": "HEALTH",
+  "coverage_type": "Gold Comprehensive PPO Choice",
+  "effective_date": "2026-01-01",
+  "expiration_date": "2027-01-01",
+  "is_active": true,
+  "coverage_limit": 1000000.0,
+  "deductible": 1000.0,
+  "co_pay_percent": 0.0,
+  "co_insurance_percent": 20.0,
+  "out_of_pocket_max": 6000.0,
+  "applicable_perils": [
+    "Emergency Room & Acute Trauma Care",
+    "Inpatient & Outpatient Surgical Procedures",
+    "Diagnostic Imaging: MRI, CT, X-Ray",
+    "Prescription Medications (Tier 1-3)"
+  ],
+  "specific_exclusions": [
+    "Purely cosmetic surgical procedures without reconstructive clinical justification",
+    "Experimental or unproven clinical therapies not FDA approved",
+    "Unbundled hospital administrative and duplicate tray surcharges",
+    "Non-emergency care rendered by out-of-network providers without prior authorization"
+  ],
+  "clauses": [
+    {
+      "clause_id": "HLTH-SEC-1.1",
+      "section_number": "Schedule of Benefits - Section 4",
+      "content": "Emergency Services & No Surprises Act: Emergency care rendered in an acute hospital ER is covered at the in-network cost-sharing level (subject to $1,000 deductible and 20% co-insurance) regardless of the facility or physician's network affiliation.",
+      "section_title": "Emergency Services & Prudent Layperson Standard",
+      "is_exclusion": false
+    },
+    {
+      "clause_id": "HLTH-SEC-1.2",
+      "section_number": "Schedule of Benefits - Section 6",
+      "content": "Diagnostic Imaging (MRI / CT): Inpatient or emergency diagnostic imaging is reimbursed at allowed standard fee schedules (e.g. CPT 70553 Brain MRI cap $1,850.00). Claims exceeding regional standard by > 40% will be adjusted to benchmark.",
+      "section_title": "Diagnostic Radiology Fee Caps",
+      "is_exclusion": false
+    },
+    {
+      "clause_id": "HLTH-SEC-2.1",
+      "section_number": "Exclusions - Section 11.a",
+      "content": "Unbundled Billing Charges: Reimbursable services must be billed according to standard CMS National Correct Coding Initiative (NCCI) bundles. Separate line items for standard surgical trays, gowns, and room prep already included in primary procedure codes are disallowed.",
+      "section_title": "Unbundled & Duplicate Line Item Exclusion",
+      "is_exclusion": true
+    },
+    {
+      "clause_id": "HLTH-SEC-2.2",
+      "section_number": "Exclusions - Section 11.c",
+      "content": "Cosmetic and Elective Enhancements: Procedures performed solely for aesthetic improvement or non-medically necessary reasons are excluded from coverage.",
+      "section_title": "Cosmetic Procedure Exclusion",
+      "is_exclusion": true
+    }
+  ]
+}

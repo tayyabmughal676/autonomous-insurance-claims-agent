@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-canvas: #090B10;
+    --bg-surface: #0E121A;
+    --bg-card: #141824;
+    --bg-subsurface: #1B2130;
+    --bg-hover: #22293C;
+    --border-hairline: rgba(255, 255, 255, 0.07);
+    --border-subtle: rgba(255, 255, 255, 0.12);
+    --border-accent: rgba(59, 130, 246, 0.4);
+    --text-primary: #F3F4F6;
+    --text-secondary: #9CA3AF;
+    --text-muted: #6B7280;
+  }
+
+  body {
+    background-color: var(--bg-canvas);
+    color: var(--text-primary);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    letter-spacing: -0.01em;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+    letter-spacing: -0.02em;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  /* Sleek Enterprise Scrollbars */
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.25);
+  }
+}
+
+/* Linear / Stripe Minimalist Surfaces */
+.surface-panel {
+  background-color: #0E121A;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.surface-card {
+  background-color: #141824;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.surface-subcard {
+  background-color: #1A2030;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Subtle, tasteful micro-shadows */
+.shadow-enterprise {
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.06);
+}
+
+.shadow-elevation {
+  box-shadow: 0 10px 30px -4px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+/* Restrained Focus Ring */
+input:focus, select:focus, textarea:focus, button:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.4);
+}
